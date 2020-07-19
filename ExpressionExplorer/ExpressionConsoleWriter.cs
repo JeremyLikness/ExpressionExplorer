@@ -46,7 +46,7 @@ namespace ExpressionExplorer
 
         protected override Expression VisitParameter(ParameterExpression node)
         {
-            Console.Write($"()=>{node.Name}.");
+            Console.Write(node.Name);
             return node;
         }
 
@@ -56,7 +56,7 @@ namespace ExpressionExplorer
             {
                 Visit(node.Expression);
             }
-            Console.Write($"{node.Member?.Name}.");
+            Console.Write($".{node.Member?.Name}.");
             return node;
         }
 
